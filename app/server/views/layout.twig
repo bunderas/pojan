@@ -1,0 +1,42 @@
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Pojan</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <link href="{{ asset('css/common.css') }}" rel="stylesheet">
+    </head>
+    <body>
+      <div class="container" id="pojan">
+        <nav id="navigation">
+          <ul class="nav navbar-nav">
+              <li{% if active == 'home' %} class="active"{% endif %}><a href="{{ path('home') }}">Home</a></li>
+              <li{% if active == 'project' %} class="active"{% endif %}><a href="{{ path('project') }}">Project</a></li>
+              <li{% if active == 'about' %} class="active"{% endif %}><a href="{{ path('about') }}">About</a></li>
+              <li{% if active == 'contact' %} class="active"{% endif %}><a href="{{ path('contact') }}">Contact</a></li>
+          </ul>            
+        </nav>
+   
+        <div class="content">
+          {% block content %}
+          {% endblock %}
+        </div><!-- /.container -->
+        <footer>
+          <a href="#navigation">^</a>
+          <div>
+            <p>{{footer.name}}</p>
+            <p>{{footer.descript}}</p>          
+          </div>
+          <div>
+            <a href="{{footer.instagram}}">Instagram</a>
+            <a href="{{footer.facebook}}">Facebook</a>
+            <a href="{{footer.pinterest}}">Pinterest</a>
+          </div>
+          <div>
+            <address>{{footer.address}}</address>
+          </div>
+        </footer>  
+      </div>
+    </body>
+</html>

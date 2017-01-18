@@ -1,0 +1,17 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+	{% for project in projects %}
+	    <section>
+	    	<a href="project/{{ project.name }}">
+	    		<div>
+	    			<img src="{{asset('img/project')}}/{{project.name}}/index.jpg">
+	    			<h1>{{ project.title }}</h1>
+	    			<h2>{{ project.type }}</h2>
+	    			<h3>{{ project.location }}</h3>
+	    			<h4>{% for tag in project.tags %}{{tag}}{% endfor %}</h4>
+	    		</div>
+	    	</a>
+	    </section>
+	{% endfor %}
+{% endblock %}

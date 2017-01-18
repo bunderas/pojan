@@ -1,0 +1,16 @@
+<nav>
+	<ul id="projects">
+	{% for item in menu %}
+	    <li>
+	    	<a href="project/{{ project.name }}">
+	    		<div>
+	    			<h1>{{ project.title }}</h1>
+	    			<h2>{{ project.type }}</h2>
+	    			<h3>{{ project.location }}</h3>
+	    			<h4>{% for tag in project.tags %}{{tag}}{% endfor %}</h4>
+	    		</div>
+	    	</a>
+	    </li>
+	{% endfor %}
+	</ul>
+</nav>

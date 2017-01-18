@@ -1,0 +1,16 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+	<h1>{{ project.sub_title }}</h1>
+	
+	<a href="{{ path('project', {'projectName':project.prev}) }}">előző projekt</a>
+	<img src="{{asset('img/project')}}/{{project.name}}/{{project.images.first}}">
+	<a href="{{ path('project', {'projectName':project.next}) }}">következő projekt</a>
+	<h2>{{ project.headline }}</h2>
+	<h3>{{ project.description }}</h3>
+	<ul>
+	{% for imgLink in project.images.list %}
+	    <li><img src="{{asset('img/project')}}/{{project.name}}/{{imgLink}}"></li>
+	{% endfor %}	
+	</ul>
+{% endblock %}

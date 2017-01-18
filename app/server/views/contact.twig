@@ -1,0 +1,27 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+	<div>
+		<h1>{{footer.name}}</p>
+		<p>{{contact.address}}</p>
+		<p>{{contact.email}}</p>
+		<p>{{contact.phone}}</p>
+		<h2>munkatársak:</h2>
+		{% for oneStaff in contact.staff %}
+			<div>
+				<h3>{{oneStaff.name}}</h3>
+				<p>{{oneStaff.title}}</p>
+				<p>/{{oneStaff.education}}/</p>
+				<p>{{oneStaff.phone}}</p>
+				<p>{{oneStaff.email}}</p>
+			</div>
+		{% endfor %}
+		<a href="{{footer.facebook}}">facebook</a>
+		<a href="{{footer.pinterest}}">Pinterest</a>
+	</div>
+	<div class="map-frame">
+		<!--iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=47.5053933,18.9234721&amp;spn=56.506174,79.013672&amp;t=m&amp;z=17&amp;output=embed"></iframe-->
+		<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.hu/maps/place/Budakeszi,+G%C3%A1bor+%C3%81ron+u.+46,+2092/@47.5053933,18.9234721,17z/data=!4m13!1m7!3m6!1s0x4741df772d893873:0xec08da6e8c2e478a!2sBudakeszi,+G%C3%A1bor+%C3%81ron+u.+46,+2092!3b1!8m2!3d47.5053933!4d18.9256608!3m4!1s0x4741df772d893873:0xec08da6e8c2e478a!8m2!3d47.5053933!4d18.9256608&amp;z=17&amp;output=embed"></iframe>
+		<div class="map-content"> I want this text to be in a div box that has a black background. <br /> </div>
+    </div>
+{% endblock %}

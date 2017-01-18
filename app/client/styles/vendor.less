@@ -1,0 +1,337 @@
+.vs(@style, @val){
+    -webkit-@{style}:@val;
+    -moz-@{style}:@val;
+    -ms-@{style}:@val;
+    -o-@{style}:@val;
+    @{style}:@val;
+}
+
+.vv(@style, @val){
+    @{style}:~'-webkit-@{val}';
+    @{style}:~'-moz-@{val}';
+    @{style}:~'-ms-@{val}';
+    @{style}:~'-o-@{val}';
+    @{style}:@val;
+}
+
+.vsv(@style, @val){
+    -webkit-@{style}:~'-webkit-@{val}';
+    -moz-@{style}:~'-moz-@{val}';
+    -ms-@{style}:~'-ms-@{val}';
+    -o-@{style}:~'-o-@{val}';
+    @{style}:@val;
+}
+
+.animation(@name: anonym, @duration: 1s, @timingfunction: linear, @delay: 0, @iterationcount: 1, @direction: normal, @fillmode: both) {
+    .vs(animation, @name @duration @timingfunction @delay @iterationcount @direction @fillmode);
+}
+
+.animation-delay(@delay: 0.2s) {
+    .vs(animation-delay, @delay);
+}
+
+.animation-direction(@direction: normal) {
+    .vs(animation-direction, @direction);
+}
+
+.animation-duration(@duration: 1s) {
+    .vs(animation-duration, @duration);
+}
+
+.animation-fillmode(@fillmode: both) {
+    .vs(animation-fillmode, @fillmode);
+}
+
+.animation-iteration-count(@iterationcount: 1) {
+    .vs(animation-iteration-count, @iterationcount);
+}
+
+.animation-name(@name: anonym) {
+    .vs(animation-name, @name);
+}
+
+.animation-timing-function(@timingfunction: linear) {
+    .vs(animation-timing-function, @timingfunction);
+}
+
+.appearance(@name){
+    .vs(appearance, @name);
+}
+
+.backface-visibility(@argument: hidden) {
+    .vs(backface-visibility, @argument);
+}
+
+.background-clip(@argument: content-box) {
+    .vs(backface-clip, @argument);
+}
+
+.background-origin(@argument: border-box) {
+    .vs(background-origin, @argument);
+}
+
+.background-size(@x: auto, @y: auto) when (@x=cover) {
+    .vs(background-size, cover);
+}
+
+.background-size(@x: auto, @y: auto) {
+    .vs(background-size, @x @y);
+}
+
+.background-color(@r: 0, @g: 0, @b: 0, @a: 1){
+    background-color: rgb(@r, @g, @b);
+    background-color: rgba(@r, @g, @b, @a);
+}
+
+.border-image(@source: none, @slice: 100%, @width: 1, @outset: 0, @repeat: stretch){
+    .vs(border-image, @source @slice @width @outset @repeat);
+}
+
+.border-image-source(@source: none){
+    .vs(border-image-source, @source);
+}
+
+.border-image-slice(@slice: 100%){
+    .vs(border-image-slice, @slice);
+}
+
+.border-image-width(@width: 1){
+    .vs(border-image-width, @width);
+}
+
+.border-image-outset(@outset: 0){
+    .vs(border-image-outset, @outset);
+}
+
+.border-image-repeat(@repeat: stretch){
+    .vs(border-image-repeat, @repeat);
+}
+
+.border-radius(@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
+    .vs(border-top-right-radius, @topright);
+    .vs(border-bottom-right-radius, @bottomright);
+    .vs(border-bottom-left-radius, @bottomleft);
+    .vs(border-top-left-radius, @topleft);
+    .background-clip(padding-box);
+}
+
+.box-shadow(@set: outset, @x: 0, @y: 1px, @blur: 2px, @spread: 2px, @color: rgba(0, 0, 0, 0.5)) when (@set=outset) {
+    .vs(box-shadow, @x @y @blur @spread @color);
+}
+
+.box-shadow(@set, @x: 0, @y: 1px, @blur: 2px, @spread: 2px, @color: rgba(0, 0, 0, 0.5)) when (@set=inset) {
+    .vs(box-shadow, @set @x @y @blur @spread @color);
+}
+
+.box-sizing(@sizing: border-box) {
+    .vs(box-sizing, @sizing);
+}
+
+.columns(@colwidth: 250px, @colcount: 0, @colgap: 50px, @columnRuleColor: #EEE, @columnRuleStyle: solid, @columnRuleWidth: 1px) {
+    .vs(column-width, @colwidth);
+    .vs(column-count, @colcount);
+    .vs(column-gap, @colgap);
+    .vs(column-rule-color, @columnRuleColor);
+    .vs(column-rule-style, @columnRuleStyle);
+    .vs(column-rule-width, @columnRuleWidth);
+}
+
+.display(@value) {
+    //.vv(display, @value);
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    
+    display: flex;
+}
+
+
+.flex(@grow: 0, @shrink: 1, @basis: auto){
+    .vs(flex, @grow @shrink @basis);
+}
+
+.flex-basis(@basis: auto){
+    .vs(flex-basis, @basis);
+}
+
+.flex-direction(@direction: row){
+    .vs(flex-direction, @direction);
+}
+
+.flex-flow(@direction: row, @wrap: nowrap){
+    .vs(flex-flow, @direction @wrap);
+}
+
+.flex-grow(@grow: 0){
+    .vs(flex-grow, @grow);
+}
+
+.flex-shrink(@shrink: 1){
+    .vs(flex-shrink, @shrink);
+}
+
+.flex-wrap(@wrap: nowrap){
+    .vs(flex-wrap, @wrap);
+}
+
+.fontface(@family, @file, @url, @id: webfont) {
+    @font-face {
+        font-family: @family;
+        font-weight: normal;
+        font-style: normal;
+        src: url('@{url}/@{file}.eot');
+        src: url('@{url}/@{file}.eot?#iefix') format('embedded-opentype'),
+        url('@{url}/@{file}.woff') format('woff'),
+        url('@{url}/@{file}.ttf') format('truetype'),
+        url('@{url}/@{file}.svg#@{id}') format('svg');
+    }
+}
+
+.gradient(@from: #EEE, @to: #FFF, @dir: top, @color: @to ) when (@dir=top) {
+    background-color: @color;
+    .vv(background-image,linear-gradient(@dir, @from, @to));
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{from}', endColorstr='@{to}',GradientType=0 );
+}
+
+.gradient(@from: #EEE, @to: #FFF, @dir: left, @color: @to ) when (@dir=left) {
+    background-color: @color;
+    background-image: -webkit-linear-gradient(left, @from, @to);
+    background-image: -moz-linear-gradient(right, @from, @to);
+    background-image: -ms-linear-gradient(to right, @from, @to);
+    background-image: -o-linear-gradient(right, @from, @to);
+    background-image: linear-gradient(to right, @from, @to);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{from}', endColorstr='@{to}',GradientType=1 );
+}
+
+.justify-content(@value: flex-start){
+    .vs(justify-content, @value);
+}
+
+.opacity(@o: 0.5) {
+    .vs(opacity, @o);
+    @opperc: @o * 100;
+    -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=@{opperc})";
+    filter: ~"alpha(opacity=@{opperc})";
+}
+
+.perspective(@argument: none) {
+    .vs(perspective, @argument);
+}
+
+.perspective-origin(@x: 0, @y: 0) {
+    .vs(perspective-origin, @x @y);
+}
+
+.tap-highlight-color(@val: rgba(0, 0, 0, 0)) {
+    .vs(tap-highlight-color, @val);
+}
+
+.transition(@prop: all, @duration:0.2s, @ease:ease-out) {
+    .vs(transition, @prop @duration @ease);
+}
+
+.transition(@prop: all, @duration:0.2s, @ease:ease-out) when (@prop=transform) {
+    .vsv(transition, @prop @duration @ease);
+}
+
+.transition-delay(@delay: 0.2s) {
+    .vs(transition-delay, @delay);
+}
+
+.transition-duration(@duration: 0.2s) {
+    .vs(transition-duration, @duration);
+}
+
+.transition-property(@property: all) {
+    .vs(transition-property, @property);
+}
+
+.transition-timing-function(@timingFunction: linear) {
+    .vs(transition-timing-function, @timingFunction);
+}
+
+.transition-disabled() {
+    .vs(transition, none);
+}
+
+.transform(...) {
+    .vs(transform, @arguments);
+}
+
+.transform-origin(@x: 0, @y: 0) {
+    .vs(transform-origin, @x @y);
+}
+
+.transform-style(@argument: preserve-3d) {
+    .vs(transform-style, @argument);
+}
+
+.round(@radius: 2px) {
+    .vs(border-radius, @radius);
+}
+
+.rotate(@deg:5deg) {
+    .transform(rotate(@deg));
+}
+
+.scale(@ratio:1.5) {
+    .transform(scale(@ratio));
+}
+
+.translate(@x:0, @y:0) {
+    .transform(translate(@x, @y));
+}
+
+.translateX(@x) {
+    .transform(translateX(@x));
+}
+
+.translateY(@y) {
+    .transform(translateY(@y));
+}
+
+.translate3d(@x:0, @y:0, @z:0) {
+    .transform(translate3d(@x, @y, @z));
+}
+
+.user-select(@p:none){
+    .vs(user-select, @p);
+}
+
+.placeholder(@color: '#000', @font: 'Arial'){
+    &::-webkit-input-placeholder {
+        color: @color;
+        font-family: @font;
+        font-weight: normal;
+        font-style: italic;
+    }
+    &:-moz-placeholder {
+        color: @color;
+        font-family: @font;
+        font-weight: normal;
+        font-style: italic;
+    }
+    &::-moz-placeholder {
+        color: @color;
+        font-family: @font;
+        font-weight: normal;
+        font-style: italic;
+    }
+    &:-ms-input-placeholder {
+        color: @color;
+        font-family: @font;
+        font-weight: normal;
+        font-style: italic;
+    }
+    &:focus::-webkit-input-placeholder{
+        color:transparent;
+    }
+}

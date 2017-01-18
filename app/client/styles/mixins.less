@@ -1,0 +1,82 @@
+.btnColors(@colorFrom: #fff, @colorTo: #ebebeb, @borderPos: bottom, @borderColor: #616161, @textColor: @textDarkgrey){
+    .gradient(@from: @colorFrom, @to: @colorTo, @dir: top);
+    border-top: 1px solid @colorFrom;
+    border-bottom: 1px solid @colorTo;
+    border-@{borderPos}: 1px solid @borderColor;
+    color: @textColor;
+}
+
+.btn(@colorFrom: #fff, @colorTo: #ebebeb, @borderPos: bottom, @borderColor: #616161, @textColor: @textDarkgrey){
+    display: inline-block;
+    vertical-align: top;
+    font-family: 'Tele-GroteskEEFet', Arial;
+    font-weight: normal;
+    color: @textColor;
+    text-align: center;
+    text-decoration: none;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    .btnColors(@colorFrom, @colorTo, @borderPos, @borderColor, @textColor);
+    .box-sizing();
+}
+
+.line(@w: 10px,@h: 10px, @c: #000, @d: 45deg, @l: 0, @t: 0, @r: auto, @b: auto){
+    content:'';
+    display: block;
+    position: absolute;
+    top: @t;
+    left: @l;
+    right: @r;
+    bottom: @b;
+    width: @w;
+    height: @h;
+    background: @c;
+    .transform(rotate(@d));
+    .transform-origin(center, center);
+}
+/*
+.x49(@w: 6px,@h: 28px,@c: #fff, @l: 53px, @t: 18px, @r: auto, @b: auto){
+    &:after {
+        .line(@w,@h,@c, @d: -139deg,@l,@t);
+    }
+    &:before {
+        .line(@w,@h,@c, @d: -49deg,@l,@t);
+    }
+}*/
+.x(@w: 6px,@h: 28px,@c: #fff, @l: 53px, @t: 18px, @r: auto, @b: auto){
+    &:after {
+        .line(@w,@h,@c, @d: -135deg,@l,@t);
+    }
+    &:before {
+        .line(@w,@h,@c, @d: -45deg,@l,@t);
+    }
+}
+
+.arrowRight(@w: 2px,@h: 10px,@c: @mag, @l: auto, @t: 28px, @r: 10px, @b: auto){
+    &:after {
+        .line(@w,@h,@c, @d: -139deg,@l,@t+@h/2+2,@r,@b);
+    }
+    &:before {
+        .line(@w,@h,@c, @d: -49deg,@l,@t,@r,@b);
+    }
+}
+
+.arrowLeft(@w: 2px,@h: 10px,@c: @mag, @l: 10px, @t: 28px, @r: auto, @b: auto){
+    &:after {
+        .line(@w,@h,@c, @d: 139deg,@l,@t+@h/2+2,@r,@b);
+    }
+    &:before {
+        .line(@w,@h,@c, @d: 49deg,@l,@t,@r,@b);
+    }
+}
+
+.pipe(@w: 6px,@h: 28px,@c: #fff, @l: 53px, @t: 18px, @r: auto, @b: auto){
+    &:after {
+        .line(@w,@h,@c, @d: -139deg,@l,@t);
+    }
+    &:before {
+        .line(@w,@h / 2,@c, @d: -49deg,@l - @h + @w/2, @t+@h/2);
+        margin: 0 0 0 @h/2;
+    }
+}

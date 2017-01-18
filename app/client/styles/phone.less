@@ -1,0 +1,104 @@
+&.home {
+    margin: 0;
+    width: 80%;
+}
+
+.banner {
+    padding: 0 @gq;
+}
+
+.socials {
+    li {
+        padding: 0.75rem 1rem;
+    }
+    img {
+        width: 32px;
+    }
+}
+
+header{
+    padding: 0.75rem 0.75rem 0;
+    nav{
+        position: relative;
+        top: auto;
+        right: auto;
+        display: block;
+        margin: 0.5rem -0.75rem 0.5rem;
+        text-align: center;
+        a{
+            vertical-align: top;
+            display: inline-block;
+            font-size: 1.5rem;
+            line-height: 1.75rem;
+            color: @headerColor;
+            padding: 0.5rem 0.5rem;
+        }
+    }
+}
+
+#calculator {
+    position: relative;
+    padding: 0;
+    .first {
+        display: block;
+        padding: 1.25rem 0;
+        font-size: 0;
+        >div {
+            padding: 0 0.625rem;
+        }
+    }
+    .second {
+        width: 20%;
+        display: block;
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 10;
+        overflow-y: hidden;
+        .valutaSelect {
+            position: absolute;
+            left: 0;
+            top: 70px;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            width: auto;
+            ul {
+                li {
+                    display: block;
+                    width: auto;
+                    margin-right: 0;
+                }
+            }
+        }
+        .typeSelect {
+            position: relative;
+            left: auto;
+            width: 100%;
+        }
+        ul {
+            li {
+                a{
+                    line-height: 4.5rem;
+                }
+            }
+        }
+    }
+}
+
+.content {
+    h1 {
+        font-size: 1rem;
+        padding-bottom: 1rem;
+        strong{
+            font-size: 2rem;
+        }
+    }
+}
+
+.content {
+    .boxcontainer {
+        width: 100%;
+    }
+}

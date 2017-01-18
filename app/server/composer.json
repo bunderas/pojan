@@ -1,0 +1,10 @@
+{
+    "name": "bunderas/pojan",
+    "description": "pojan website",
+    "type": "project",
+    "require": {
+        "silex/silex": "^1.2",
+        "symfony/twig-bridge": "^2.6",
+        "twig/twig": "^1.30"    
+    }
+}
