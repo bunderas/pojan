@@ -59,23 +59,35 @@ header {
 
 .content {
     section{
+        overflow: hidden;
+        position: relative;
         margin: 3.3em auto ;
-        max-width: 1534px;
+        padding: 0px 0px;
+        max-width: 1515px;
         
         img{
-            max-width: 64rem;
-            width: 58%;
+            padding: 0 0 0 0;
+            width: 57.55775577557756%;
         }
-        div{
-            width: 26%;
-            margin-top: 9.5%;
+        .holder{
+            width: 41.44224422442244%;
+            height: 100%;
+            position: absolute;
+            div{
+                width: auto;
+                position: absolute;
+                left: 50%;
+                top:50%;
+                transform:translate(-50%, -50%);
+            }
+            
             letter-spacing: 0.12rem;
             h2{
                 font-size: 1.5rem;
                 font-weight: 700;
                 letter-spacing: 0.6rem;
                 text-transform: uppercase;
-                margin-bottom: 12%;
+                margin-bottom: 20%;
             }
             h3{
                 margin-bottom: 2%;
@@ -85,17 +97,18 @@ header {
                 text-transform: uppercase;
             }
             p {
-                margin-top: 9%;
+                margin-top: 15%;
                 a{
                     color:#5cd0e0;
                     font-size: 0.9rem;
                 }
             }
-            >a{
-                margin-top: 16.5%;
+            div>a{
+                margin-top: 27%;
                 display: inline-block;
                 .borderedButton;
             }
+            
         }
         &:after{
             content:'';
@@ -103,28 +116,29 @@ header {
             clear: both;
         }
     }
+    
     section:nth-child(2n){    
         img{
-            margin-left: 1rem;
+            margin-left: 1%;
             float: left;
         }
-        div{
-            margin-right: 1rem;
-            float: right;
+        .holder{
+            
+            top: 0;
+            right: 0;
         }
 
     }
     section:nth-child(2n-1){    
         img{
-            margin-right: 1rem;
+            margin-right: 1%;
             float: right;
         }
-        div{
-            margin-left: 11.5%;
-            float: left;
+        .holder{
+            top: 0;
+            left: 0;
         }
     }
-
 }
 
 
