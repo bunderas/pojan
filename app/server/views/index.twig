@@ -5,10 +5,9 @@
 	    <section>
 			<img src="{{asset('img/project')}}/{{project.name}}/index.jpg">
 			<div>
-				<h2>{{ project.title }}</h2>
-				<h3>{{ project.type }}</h3>
-				<h3>{{ project.location }}</h3>
-				<h4>{% for tag in project.tags %}{{tag}}{% endfor %}</h4>
+				<h2>{{ project.title|raw}}</h2>
+				<h3>{{ project.type|raw}}</h3>
+				<p>{% for tag in project.tags %}<a href="#tag">{{tag}}</a>{% endfor %}</p>
 				<a href="project/{{ project.name }}">olvass tovább</a>
 			</div>
 	    </section>

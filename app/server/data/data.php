@@ -10,9 +10,8 @@ $menu=[
 $projects=[
 	[
 		'name' => 'skandinav',
-		'title' => 'skandináv ihletésű lakás budán',
-		'type' => 'befejező szakipar/belsőépítészet',
-		'location' => 'budapest xii.',
+		'title' => 'skandináv <br>ihletésű <br>lakás budán',
+		'type' => 'befejező <br>szakipar/belsőépítészet <br>budapest xii.',
 		'tags' => ['#kőris','#fehér','#natúr','#fény'],
 		'sub_title' => 'Északi fény',
 		'headline' => 'Budai társasház északi sarkában szerkezetkész kislakás befejezése',
@@ -20,9 +19,8 @@ $projects=[
 	],
 	[
 		'name' => 'klasszikus',
-		'title' => 'KLASSZIKUS-MODERN LAKÁS A VÁR OLDALÁBAN',
-		'type' => 'KOMPLEX SZAKIPAR/BELSŐÉPÍTÉSZET',
-		'location' => 'BUDAPEST I.',
+		'title' => 'klasszikus-modern lakás a vár oldalában',
+		'type' => 'komplex szakipar/belsőépítészet <br>budapest i.',
 		'tags' => ['#tradíció','#nyitott','#otthonos','#harmonikus'],
 		'sub_title' => 'Régből újat – újból régit ',
 		'headline' => 'Egyszerű társasházban klasszikus enteriőr modern köntösben.',
@@ -30,9 +28,8 @@ $projects=[
 	],
 	[
 		'name' => 'iroda_es_oltozo_egyuttes',
-		'title' => 'CSARNOKBÓL ÁTALAKÍTOTT IRODA ÉS ÖLTÖZŐ EGYÜTTES',
-		'type' => 'KOMPLEX SZERELŐ- ÉS SZAKIPAR',
-		'location' => 'BUDAPEST III.',
+		'title' => 'csarnokból átalakított iroda és öltöző együttes',
+		'type' => 'komplex szerelő- és szakipar <br>budapest iii.',
 		'tags' => ['#tér','#monokróm','#funkció','#látvány'],
 		'sub_title' => 'Hatékony értékteremtés',
 		'headline' => 'Ipari épületegyüttesben funkcióváltás következtében vált szükségessé komplex generál kivitelezési feladat lebonyolítása.',
@@ -40,9 +37,8 @@ $projects=[
 	],
 	[
 		'name' => 'budai_villa',
-		'title' => 'ARCULATFRISSÍTÉS EGY BUDAI VILLÁBAN ',
-		'type' => 'KOMPLETT SZAKIPAR/BELSŐÉPÍTÉSZET',
-		'location' => 'BUDAPEST XII.',
+		'title' => 'arculatfrissítés egy budai villában ',
+		'type' => 'komplett szakipar/belsőépítészet <br>budapest xii.',
 		'tags' => ['#luxus','#kerlite','#élmény','#fényjáték'],
 		'sub_title' => 'Welness facelift',
 		'headline' => 'Budai villaépületben medence tér korszerűsítés és arculatváltás',
@@ -51,9 +47,8 @@ $projects=[
 
 	[
 		'name' => 'body_shop',
-		'title' => 'BODY SHOP ÜZLET FELÚJÍTÉS ÉS ÁTALKÍTÁS ',
-		'type' => 'KOMPLEX SZERELŐ ÉS SZAKIPAR',
-		'location' => 'BUDAPEST XI. Alle Bevásárló központ',
+		'title' => 'body shop üzlet felújítés és átalkítás',
+		'type' => 'komplex szerelő és szakipar <br>budapest xi. Alle Bevásárló központ',
 		'tags' => ['#hatékonyság','#látvány','#brand','#minőség'],
 		'sub_title' => 'Arculatfrissítés',
 		'headline' => 'Budai villaépületben medence tér korszerűsítés és arculatváltás',

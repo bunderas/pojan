@@ -45,11 +45,12 @@ header {
     
     h1{
         font-size: 1.3rem;
-        top: @headerHeight/2;
-        right: 10%;
+        top: @headerHeight/2+35px;
+        right: 15.5%;
         text-transform: uppercase;
         font-weight: 600;
         letter-spacing: 0.4em;
+        line-height: 1.5;
         position: absolute;
         text-align: right;
         display: block;
@@ -59,7 +60,7 @@ header {
 .content {
     section{
         margin: 3.3em auto ;
-        max-width: 1534;
+        max-width: 1534px;
         
         img{
             max-width: 64rem;
@@ -67,6 +68,34 @@ header {
         }
         div{
             width: 26%;
+            margin-top: 9.5%;
+            letter-spacing: 0.12rem;
+            h2{
+                font-size: 1.5rem;
+                font-weight: 700;
+                letter-spacing: 0.6rem;
+                text-transform: uppercase;
+                margin-bottom: 12%;
+            }
+            h3{
+                margin-bottom: 2%;
+                font-size: 1.07rem;
+                font-weight: 600;
+                line-height: 1.4;
+                text-transform: uppercase;
+            }
+            p {
+                margin-top: 9%;
+                a{
+                    color:#5cd0e0;
+                    font-size: 0.9rem;
+                }
+            }
+            >a{
+                margin-top: 16.5%;
+                display: inline-block;
+                .borderedButton;
+            }
         }
         &:after{
             content:'';
@@ -91,7 +120,7 @@ header {
             float: right;
         }
         div{
-            margin-left: 12rem;
+            margin-left: 11.5%;
             float: left;
         }
     }
