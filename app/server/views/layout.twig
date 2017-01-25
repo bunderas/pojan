@@ -9,33 +9,38 @@
     </head>
     <body>
       <div class="container" id="pojan">
-        <nav id="navigation">
+        <header>
+          <a class="logo" title="Pojan" href="#"><span>PojanLogo</span></a>
+          <h1>{{footer.descript|raw}}</h1>
+        </header>
+        <!--nav id="navigation">
           <ul class="nav navbar-nav">
               <li{% if active == 'home' %} class="active"{% endif %}><a href="{{ path('home') }}">Home</a></li>
               <li{% if active == 'project' %} class="active"{% endif %}><a href="{{ path('project') }}">Project</a></li>
               <li{% if active == 'about' %} class="active"{% endif %}><a href="{{ path('about') }}">About</a></li>
               <li{% if active == 'contact' %} class="active"{% endif %}><a href="{{ path('contact') }}">Contact</a></li>
           </ul>            
-        </nav>
+        </nav-->
    
         <div class="content">
           {% block content %}
           {% endblock %}
         </div><!-- /.container -->
         <footer>
-          <a href="#navigation">^</a>
-          <div>
-            <p>{{footer.name}}</p>
-            <p>{{footer.descript}}</p>          
-          </div>
-          <div>
-            <a href="{{footer.instagram}}">Instagram</a>
-            <a href="{{footer.facebook}}">Facebook</a>
-            <a href="{{footer.pinterest}}">Pinterest</a>
-          </div>
-          <div>
-            <address>{{footer.address}}</address>
-          </div>
+          <a href="#navigation"><span direction="top"></span></a>
+          <div class="container">
+            <div class="name">
+              <h4>{{footer.name}}</h4>
+              <p>{{footer.descript|striptags}}</p>
+            </div>
+            <div class="social">
+              <a href="{{footer.instagram}}">Instagram</a>
+              <a href="{{footer.facebook}}">Facebook</a>
+              <a href="{{footer.pinterest}}">Pinterest</a>
+            </div>
+            <div class="address">
+              <address>{{footer.address}}</address>
+            </div>
         </footer>  
       </div>
     </body>

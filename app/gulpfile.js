@@ -136,7 +136,8 @@
         var filter = gfilter(['**/common.less']);
         return gulp.src(paths.src.less)
             .pipe(plumber(function(error) {
-                console.log('\x1b[31m', error.message, '\x1b[0m');
+                //console.log('\x1b[32m', error.message, '\x1b[0m');
+                console.log('\x1b[41m', error.message, '\x1b[0m');
                 browserSync.notify(error.message, 4000);
             })).pipe(filter)
             /*.pipe(gulpif(dev, changed(paths.dist.root, {

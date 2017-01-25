@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+
 @import "vendor.less";
 @import "variables.less";
 @import "mixins.less";
@@ -6,7 +8,7 @@
 html {
     height: 100%;
     width: 100%;
-    font-size: 16px;
+    font-size: 14px;
     overflow-x: hidden;
 }
 
@@ -36,9 +38,9 @@ body {
     height: 100%;
     width: 100%;
     overflow-x: hidden;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     line-height: 1.2;
-    //background: @bodyBackground;
+    background: @bodyBackground;
     color: #000;
     * {
         -webkit-touch-callout: none;
@@ -48,24 +50,26 @@ body {
     }
 }
 
+
 #pojan {
+    
     @import "reset.less";
     min-width: 320px;
     height: 100%;
-    max-width: 1240px;
+    max-width: 1920px;
     margin: 0 auto;
-    /**{
-        padding: 0;
-        margin: 0;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    }*/
+
+
     @import "desktop.less";
+
     @media @tablet {
         @import "tablet.less";
     }
+
     @media @phone {
         overflow-x: hidden;
         @import "phone.less";
     }
     @import "social.less";
 }
+

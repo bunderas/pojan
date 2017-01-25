@@ -1,5 +1,5 @@
-@imgSrc: '/static/img/';
-@fontSrc: '/static/font';
+@imgSrc: '../img/';
+@fontSrc: '../font';
 @desktop: ~"(min-width: 1024px)";
 @tablet: ~"(min-width: 640px) and (max-width: 1023px)";
 @phone: ~"(min-width: 1px) and (max-width: 639px)";
@@ -74,11 +74,13 @@
 
 /* theme 1 */
 
-@linkColor: #fff;
+@linkColor: #000;
 
-@bodyBackground: @gray5;
+@bodyBackground: @white100;
 @headerBackground: @transparent;
-@headerColor: #e5a400;
+@headerColor: @black;
+@headerPosition: center top;
+@headerRepeat: no-repeat;
 @headerH1Color: #776062;
 
 @inputBorder: @yellow100; //#6c7214;
@@ -110,6 +112,6 @@
 @newsSubColor: #e5a400;
 @newsTextColor: #776062;
 
-@footerBackground: @green100;
-@footerBackground2: @green80;
-@footerColor: #fff;
+@footerBackground: @white100;
+@footerLineColor: #19e6da;
+@footerColor: #000;

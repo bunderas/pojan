@@ -86,7 +86,7 @@ $contact=[
 
 $footer=[
 	'name' => 'pojan',
-	'descript' => 'komplex épületkivitelezés',
+	'descript' => 'komplex <br>épületkivitelezés',
 	'address' => '2092 Budakeszi, Gábor Áron utca 46d.',
 	'facebook' => 'https://www.facebook.com/pojanmuhely/',
 	'pinterest' => 'https://hu.pinterest.com/',

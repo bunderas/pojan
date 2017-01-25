@@ -71,6 +71,20 @@
     }
 }
 
+.arrowTop(@w: 2px,@h: 10px,@c: @mag, @l: 10px, @t: 28px, @r: auto, @b: auto){
+    @offset:sin(56deg)*@h/2;
+    &:after {
+        .line(@w,@h,@c, @d: 56deg,(@l)-@offset,@t+@h/2+2,@r,@b);
+    }
+    &:before {
+        .line(@w,@h,@c, @d: 124deg,(@l)+@offset,@t+@h/2+2,@r,@b);
+    }
+}
+
+.circle(@w: 2px,@c: #000){
+    border: @w solid @c;
+}
+
 .pipe(@w: 6px,@h: 28px,@c: #fff, @l: 53px, @t: 18px, @r: auto, @b: auto){
     &:after {
         .line(@w,@h,@c, @d: -139deg,@l,@t);
