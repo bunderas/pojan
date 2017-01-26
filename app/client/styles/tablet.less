@@ -1,83 +1,61 @@
-&.home {
-    margin: 0;
-    width: 80%;
+@headerHeight: 410px;
+
+nav{
+    display: none;
 }
 
-.banner {
-    padding: 0 @gq;
-}
-
-.socials {
-    li {
-        padding: 0.5rem 1rem;
+header {
+    height: @headerHeight;
+    background-image: url('@{imgSrc}header_1024.jpg');
+    margin-bottom: 2rem;
+/*
+    a.logo{
+        margin: 1rem 0 0 6rem;
+        width: 36px;
+        height:42px;
     }
-    img {
-        width: 32px;
-    }
-}
-
-/*header {
-    padding: 0.75rem 0.75rem 0.6rem;
-}*/
-
-#calculator {
-    position: relative;
-    padding: 0;
-    .first {
+    */
+    h1{
+        font-size: 1.3rem;
+        top: @headerHeight/2+35px;
+        right: 15.5%;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 0.4em;
+        line-height: 1.5;
+        position: absolute;
+        text-align: right;
         display: block;
-        padding: 1.25rem 0;
-        font-size: 0;
-        >div {
-            padding: 0 0.625rem;
-        }
-    }
-    .second {
-        width: 20%;
-        display: block;
-        position: fixed;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        z-index: 10;
-        overflow-y: hidden;
-        .valutaSelect {
-            position: absolute;
-            left: 0;
-            top: 70px;
-            right: 0;
-            bottom: 0;
-            overflow: hidden;
-            width: auto;
-            ul {
-                li {
-                    display: block;
-                    width: auto;
-                }
-            }
-        }
-        .typeSelect {
-            position: relative;
-            left: auto;
+    }    
+}
+
+#projects {
+    section{
+        position: static;
+        img{
+            padding: 0 0 0 0;
+            margin: 0 0 0 0;
             width: 100%;
+            display: block;
+            position: relative;
+            float: none;
         }
-        ul {
-            li {
-                a{
-                    line-height: 4.5rem
-                }
-            }
+        .holder{
+            float: none;
+            width: 100%;
+            height: 40rem;
+            display: inline-block;
+            position: relative;
+        }        
+    }
+    section:nth-child(2n){    
+        img{
+            margin-left: 0;
         }
     }
-}
-
-.content {
-    h1 {
-        font-size: 1.25rem;
-    }
-}
-
-.content {
-    .boxcontainer {
-        width: 50%;
+    section:nth-child(2n-1){    
+        img{
+            margin-right: 0;
+        }
     }
 }

@@ -12,7 +12,7 @@ a {
 }
 
 nav {
-    /*display: none;*/
+    display: none;
 }
 
 
@@ -45,7 +45,7 @@ header {
     
     h1{
         font-size: 1.3rem;
-        top: @headerHeight/2+35px;
+        top: @headerHeight/2+2.5rem;
         right: 15.5%;
         text-transform: uppercase;
         font-weight: 600;
@@ -57,7 +57,7 @@ header {
     }
 }
 
-.content {
+#projects {
     section{
         overflow: hidden;
         position: relative;
@@ -79,6 +79,7 @@ header {
                 left: 50%;
                 top:50%;
                 transform:translate(-50%, -50%);
+                -webkit-transform:translate(-50%, -50%);
             }
             
             letter-spacing: 0.12rem;
@@ -165,7 +166,6 @@ footer {
             }
             p {
                 font-size: 0.9rem;
-
             }
         }
         .social{

@@ -1,6 +1,7 @@
 {% extends 'layout.twig' %}
 
 {% block content %}
+	<div id="projects">
 	{% for project in projects %}
 	    <section>
 			<img src="{{asset('img/project')}}/{{project.name}}/index.jpg">
@@ -14,4 +15,5 @@
 			</div>
 	    </section>
 	{% endfor %}
+	</div>
 {% endblock %}

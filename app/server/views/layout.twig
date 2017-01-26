@@ -13,14 +13,14 @@
           <a class="logo" title="Pojan" href="#"><span>PojanLogo</span></a>
           <h1>{{footer.descript|raw}}</h1>
         </header>
-        <!--nav id="navigation">
+        <nav id="navigation">
           <ul class="nav navbar-nav">
               <li{% if active == 'home' %} class="active"{% endif %}><a href="{{ path('home') }}">Home</a></li>
               <li{% if active == 'project' %} class="active"{% endif %}><a href="{{ path('project') }}">Project</a></li>
               <li{% if active == 'about' %} class="active"{% endif %}><a href="{{ path('about') }}">About</a></li>
               <li{% if active == 'contact' %} class="active"{% endif %}><a href="{{ path('contact') }}">Contact</a></li>
           </ul>            
-        </nav-->
+        </nav>
    
         <div class="content">
           {% block content %}
