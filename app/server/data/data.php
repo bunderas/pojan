@@ -10,8 +10,8 @@ $menu=[
 $projects=[
 	[
 		'name' => 'skandinav',
-		'title' => 'skandináv <br>ihletésű <br>lakás budán',
-		'type' => 'befejező <br>szakipar/belsőépítészet <br>budapest xii.',
+		'title' => 'skandináv ihletésű lakás budán',
+		'type' => 'befejező szakipar/belsőépítészet <br>budapest xii.',
 		'tags' => ['#kőris','#fehér','#natúr','#fény'],
 		'sub_title' => 'Északi fény',
 		'headline' => 'Budai társasház északi sarkában szerkezetkész kislakás befejezése',

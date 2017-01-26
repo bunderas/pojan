@@ -8,13 +8,7 @@ header {
     height: @headerHeight;
     background-image: url('@{imgSrc}header_1024.jpg');
     margin-bottom: 2rem;
-/*
-    a.logo{
-        margin: 1rem 0 0 6rem;
-        width: 36px;
-        height:42px;
-    }
-    */
+
     h1{
         font-size: 1.3rem;
         top: @headerHeight/2+35px;
@@ -33,29 +27,66 @@ header {
     section{
         position: static;
         img{
-            padding: 0 0 0 0;
-            margin: 0 0 0 0;
+            padding: 0;
+            margin: 0;
             width: 100%;
-            display: block;
-            position: relative;
+            display: inline;
+            position: static;
             float: none;
         }
         .holder{
             float: none;
-            width: 100%;
-            height: 40rem;
-            display: inline-block;
-            position: relative;
+            width: 90%;
+            height: auto;
+            display: block;
+            position: static;
+            margin: 3rem auto 0 auto;
+            div{
+                position: static;
+                transform:none;
+                -webkit-transform:none;                
+            }
+            h3{
+                /*width: 80%;*/
+                float: left;
+                display: inline-block;
+            }            
+            p {
+                float: left;
+                /*width: 80%;*/
+                display: inline-block;
+                clear: left;
+            }
+
+            div>a{
+                .borderedButton;
+                float: right;
+                display: inline-block;
+                margin-top: -2rem;
+            }
+
         }        
+
     }
     section:nth-child(2n){    
         img{
             margin-left: 0;
+            float: none;
         }
+        .holder{
+            top: auto;
+            right: auto;
+        }
+
     }
     section:nth-child(2n-1){    
         img{
             margin-right: 0;
+            float: none;
+        }
+        .holder{
+            top: auto;
+            left: auto;
         }
     }
 }
