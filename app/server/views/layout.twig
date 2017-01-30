@@ -9,10 +9,17 @@
     </head>
     <body>
       <div class="container" id="pojan">
-        <header>
+      {% if active == 'home' %}
+        <header id="home">
           <a class="logo" title="Pojan" href="#"><span>PojanLogo</span></a>
           <h1>{{footer.descript|raw}}</h1>
         </header>
+      {% else %}        
+        <header id="simple">
+          <a class="logo" title="Pojan" href="#"><span>PojanLogo</span></a>
+        </header>
+      {% endif %}
+
         <nav id="navigation">
           <ul class="nav navbar-nav">
               <li{% if active == 'home' %} class="active"{% endif %}><a href="{{ path('home') }}">Home</a></li>

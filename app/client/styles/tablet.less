@@ -4,11 +4,10 @@ nav{
     display: none;
 }
 
-header {
+header#home{
     height: @headerHeight;
     background-image: url('@{imgSrc}header_1024.jpg');
-    margin-bottom: 2rem;
-
+    
     h1{
         font-size: 1.3rem;
         top: @headerHeight/2+35px;
@@ -21,6 +20,11 @@ header {
         text-align: right;
         display: block;
     }    
+}
+
+header {
+    margin-bottom: 2rem;
+
 }
 
 #projects {

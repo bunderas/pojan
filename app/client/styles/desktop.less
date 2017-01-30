@@ -1,4 +1,5 @@
 @headerHeight: 769px;
+@imgMaxWidth: 1020px;
 
 //max-width: 1024px;
 margin: 0 auto;
@@ -15,8 +16,7 @@ nav {
     display: none;
 }
 
-
-header {
+header#home{
     height: @headerHeight;
     position: relative;
     display: block;
@@ -26,6 +26,22 @@ header {
     background-repeat: @headerRepeat;
     color: @headerColor;
     overflow: hidden;
+
+    h1{
+        font-size: 1.3rem;
+        top: @headerHeight/2+2.5rem;
+        right: 15.5%;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 0.4em;
+        line-height: 1.5;
+        position: absolute;
+        text-align: right;
+        display: block;
+    }
+}
+
+header{
     margin-bottom: 6.7rem;
 
     a.logo{
@@ -43,23 +59,11 @@ header {
         display: none;
     }
     
-    h1{
-        font-size: 1.3rem;
-        top: @headerHeight/2+2.5rem;
-        right: 15.5%;
-        text-transform: uppercase;
-        font-weight: 600;
-        letter-spacing: 0.4em;
-        line-height: 1.5;
-        position: absolute;
-        text-align: right;
-        display: block;
-    }
 }
 
 #projects {
     section{
-        overflow: hidden;
+        /*overflow: hidden;*/
         position: relative;
         margin: 3.3em auto ;
         padding: 0px 0px;
@@ -139,6 +143,77 @@ header {
             left: 0;
         }
     }
+}
+
+#project {
+    text-align: center;
+    position: relative;
+
+    #centerblock{
+        max-width: 1020px;
+        margin: 0 auto;
+        padding: 0 12%;
+        position: relative;
+        .rotated{
+            width: 10.15625%;
+        }
+    
+        h1{
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.9em;
+            line-height: 1.5;
+            margin-bottom: 4.8rem;
+        }
+
+        img{
+            width: 100%;
+            max-width: @imgMaxWidth;
+        }
+        h2{
+            letter-spacing: 0.1em;
+            width: 80%;
+            font-weight: 700;
+            margin:3.7rem auto 2rem;
+        }
+        p{
+            max-width: @imgMaxWidth;
+            line-height: 1.6em;
+            width: 80%;
+            margin:2rem auto 4rem;
+        }
+        li{
+            margin: 3rem auto;
+        }
+    
+    .pager{
+        width: 1%;
+        position: absolute;
+        top: 13%;
+
+    }
+    .pager a{
+        letter-spacing: 0.25em;
+        transform: rotate(-90deg) translate(0%, -3%);
+        display: inline-block;
+        width: 15rem;
+        height: 15rem;
+    }
+
+    div.prev{
+        left: 5%;
+    }
+    div.next{
+        right: 5%;
+    }
+
+    #projectlist{
+        margin: 0 auto;
+        max-width: @imgMaxWidth;
+    }
+    }
+
 }
 
 
