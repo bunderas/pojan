@@ -4,6 +4,19 @@
     app.init = function() {
         app.container = $('#pojan');
         app.cookies();
+
+        $('#hamburger').on('click', function () {
+            $('#navbar').toggle();
+            /*
+            if (currHeight<0){
+                $('#navbar').animate({'width':newWidth+'px','height':newHeight+'px'},750);
+            }else{
+                $('#navigation').animate({'height':'30px','width':'27px'},750);
+            }
+            */
+        });
+
+
     };
 
     app.cookies = function() {

@@ -1,9 +1,9 @@
 <?php
 
 $menu=[
-	['name' => 'Rólunk', 'link' => 'about'],
+	['name' => 'főoldal', 'link' => '/'],
 	['name' => 'Referenciák', 'link' => '/'],
-	['name' => 'Blog', 'link' => 'blog'],
+	['name' => 'Rólunk', 'link' => 'about'],
 	['name' => 'Kapcsolat', 'contact']
 ];
 

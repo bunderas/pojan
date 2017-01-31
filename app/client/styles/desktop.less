@@ -1,5 +1,6 @@
 @headerHeight: 769px;
 @imgMaxWidth: 1020px;
+@pageMaxWidth: 1515px;
 
 //max-width: 1024px;
 margin: 0 auto;
@@ -12,13 +13,12 @@ a {
     //min-height: 45px;
 }
 
-nav {
-    display: none;
+#content{
+    z-index: 5;
 }
 
-header#home{
+header.home{
     height: @headerHeight;
-    position: relative;
     display: block;
     background-color: @headerBackground;
     background-position: @headerPosition;
@@ -29,7 +29,7 @@ header#home{
 
     h1{
         font-size: 1.3rem;
-        top: @headerHeight/2+2.5rem;
+        top: @headerHeight/2+35px;
         right: 15.5%;
         text-transform: uppercase;
         font-weight: 600;
@@ -38,25 +38,90 @@ header#home{
         position: absolute;
         text-align: right;
         display: block;
+        word-spacing: @pageMaxWidth;
     }
 }
 
 header{
     margin-bottom: 6.7rem;
+    z-index: 10;
+    .topline{
+        max-width: @pageMaxWidth;
+        margin: 2.5rem auto;
 
-    a.logo{
-        background-image: url('@{imgSrc}logo_plain.svg');
-        background-position: 0 0;
-        background-repeat: no-repeat;
-        background-size: contain;
-        display: block;
-        margin: 2.5em auto;
-        width: 72px;
-        height:84px;
-    }
+        nav {
+            overflow: hidden;
+            float: left;
+            margin: 2.5rem 0 0 11%;
+            position: absolute;
+            #hamburger{
+                
+                cursor: pointer;
+                float: left;
+                div{
+                    background-color: #000;
+                    height: 5px;
+                    margin: 4px auto;
+                    width: 23px;
+                }
+            }
+            #navbar{
+                display: none;
+                position: static;
+                left:23px;
+                background-color: @menuBgColor;
+                margin-left:27px; 
+                margin-top:27px; 
+                padding: 2.5rem 0;
+                li{
+                    opacity: 0.75;
+                    width: 100%;
+                    a{
+                        display: block;
+                        font-weight: 700;
+                        letter-spacing: 0.6rem;
+                        text-transform: uppercase;
+                        padding: 2em 4em;
+                        font-size: 1.07rem;
+                        font-weight: 600;                    
+                    }
+                    a:hover{
+                        background-color: lighten(@menuBgColor,20%);
+                    }
+                    
+                }
+            }
 
-    a span{
-        display: none;
+        }
+
+/*        #hamburger:hover nav {
+            display: block;
+        }
+*/
+        a.logo{
+            background-image: url('@{imgSrc}logo_plain.svg');
+            background-position: 50% 0;
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: block;
+            margin: 2.5em auto;
+            width: 72px;
+            height:84px;
+        }
+        .socialtop{
+            background-image: url('@{imgSrc}fb.svg');
+            background-position: 66% 0%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            float: right;
+            margin: 2.5rem 11% 0 0;
+            display: block;
+            width: 23px;
+            height:23px;            
+        }
+        a span{
+            display: none;
+        }        
     }
     
 }
@@ -67,7 +132,7 @@ header{
         position: relative;
         margin: 3.3em auto ;
         padding: 0px 0px;
-        max-width: 1515px;
+        max-width: @pageMaxWidth;
         
         img{
             padding: 0 0 0 0;
@@ -149,7 +214,7 @@ header{
     text-align: center;
     position: relative;
 
-    #centerblock{
+    .centerblock{
         max-width: 1020px;
         margin: 0 auto;
         padding: 0 12%;
@@ -187,33 +252,27 @@ header{
             margin: 3rem auto;
         }
     
-    .pager{
-        width: 1%;
-        position: absolute;
-        top: 13%;
+        .pager{
+            width: 1%;
+            position: absolute;
+            top: 13%;
 
-    }
-    .pager a{
-        letter-spacing: 0.25em;
-        transform: rotate(-90deg) translate(0%, -3%);
-        display: inline-block;
-        width: 15rem;
-        height: 15rem;
-    }
+        }
+        .pager a{
+            letter-spacing: 0.25em;
+            transform: rotate(-90deg) translate(0%, -3%);
+            display: inline-block;
+            width: 15rem;
+            height: 15rem;
+        }
 
-    div.prev{
-        left: 5%;
+        div.prev{
+            left: 5%;
+        }
+        div.next{
+            right: 5%;
+        }
     }
-    div.next{
-        right: 5%;
-    }
-
-    #projectlist{
-        margin: 0 auto;
-        max-width: @imgMaxWidth;
-    }
-    }
-
 }
 
 

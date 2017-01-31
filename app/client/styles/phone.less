@@ -1,27 +1,73 @@
 @headerHeight: 256px;
 
-nav{
-    display: none;
-}
 
-header#home{
-    height: @headerHeight;
+header.home{
+    min-height: @headerHeight;
+    height: auto;
+    overflow: auto;
     background-image: url('@{imgSrc}header_640.jpg');
     h1{
         text-align: left;
         top: 2rem;
-        left: 10rem;
-        font-size: 0.9rem;        
+        left: 5.5rem;
+        right: auto;
+        font-size: 0.9rem;  
+        width: 30%
+        
     }
 }
 
 header {
+    min-height: 40px;
+    height: auto;
+    overflow: auto;
     margin-bottom: 2rem;
+    .topline{
+        margin: 0;
+        nav {
+            /*float: right;*/
+            margin: 1.3rem 1.5rem 0 0;
+            width: 100%;                    
+                position: static;
+            #navbar{
+                margin: 50px 0 0 0;
+                position: static;
+            }
+            #hamburger{
+                float: right;
+                margin: 0 5rem 0 0;
 
-    a.logo{
-        margin: 1rem 0 0 6rem;
-        width: 36px;
-        height:42px;
+            }
+
+/*            
+                position: static; 
+            top:23px;
+            left:0px;
+            right:0px;
+            z-index: 10;
+            position: static;
+            */
+        }
+
+        a.logo{
+            position: absolute;
+            margin: 0;
+            top: 1rem;
+            left: 1.5rem;
+            width: 36px;
+            height:42px;
+        }
+
+        .socialtop{
+            position: absolute;
+            margin: 0;
+            top: 1.7rem;
+            right: 1.5rem;            
+        }        
+
+
+
+
     }
 }
 

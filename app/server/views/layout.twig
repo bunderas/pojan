@@ -6,28 +6,40 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
         <link href="{{ asset('css/common.css') }}" rel="stylesheet">
+        <script type="text/javascript" src="{{ asset('js/common.js') }}"></script>
+        <link href="{{ asset('css/common.css') }}" rel="stylesheet">
     </head>
     <body>
       <div class="container" id="pojan">
       {% if active == 'home' %}
-        <header id="home">
-          <a class="logo" title="Pojan" href="#"><span>PojanLogo</span></a>
-          <h1>{{footer.descript|raw}}</h1>
-        </header>
+        <header class="home">
       {% else %}        
-        <header id="simple">
-          <a class="logo" title="Pojan" href="#"><span>PojanLogo</span></a>
-        </header>
+        <header class="simple">
       {% endif %}
+        {% if active == 'home' %}
+          <h1>{{footer.descript}}</h1>
+        {% endif %}        
+          <div class="topline">
 
-        <nav id="navigation">
-          <ul class="nav navbar-nav">
-              <li{% if active == 'home' %} class="active"{% endif %}><a href="{{ path('home') }}">Home</a></li>
-              <li{% if active == 'project' %} class="active"{% endif %}><a href="{{ path('project') }}">Project</a></li>
-              <li{% if active == 'about' %} class="active"{% endif %}><a href="{{ path('about') }}">About</a></li>
-              <li{% if active == 'contact' %} class="active"{% endif %}><a href="{{ path('contact') }}">Contact</a></li>
-          </ul>            
-        </nav>
+              <nav id="navigation">
+                <div id="hamburger">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>        
+                <ul id="navbar">
+                    <li{% if active == 'home' %} class="active"{% endif %}><a href="{{ path('home') }}">Home</a></li>
+                    <li{% if active == 'project' %} class="active"{% endif %}><a href="{{ path('project') }}">Project</a></li>
+                    <li{% if active == 'about' %} class="active"{% endif %}><a href="{{ path('about') }}">About</a></li>
+                    <li{% if active == 'contact' %} class="active"{% endif %}><a href="{{ path('contact') }}">Contact</a></li>
+                </ul>            
+              </nav>
+
+            <a class="socialtop" title="Facebook" href="{{footer.facebook}}"><span>Facebook</span></a>
+            <a class="logo" title="Pojan" href="{{ path('home') }}"><span>PojanLogo</span></a>            
+          </div>
+        </header>
+    
    
         <div class="content">
           {% block content %}
