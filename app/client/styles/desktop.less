@@ -55,15 +55,14 @@ header{
         nav {
             overflow: hidden;
             float: left;
-            margin: 2.5rem 0 0 11%;
+            margin: 2.5rem 0 0 9.7%;
             position: absolute;
-            #hamburger{
-                
+            #hamburger{                
                 cursor: pointer;
                 float: left;
                 div{
                     background-color: #000;
-                    height: 5px;
+                    height: 4px;
                     margin: 4px auto;
                     width: 23px;
                 }
@@ -91,7 +90,7 @@ header{
                         color: #000;
                     }
                     a:hover{
-                        background-color: lighten(@menuBgColor,20%);
+                        color: #fff;
                     }
                     
                 }
@@ -115,10 +114,11 @@ header{
             background-repeat: no-repeat;
             background-size: contain;
             float: right;
-            margin: 2.5rem 11% 0 0;
+            /*margin: 2.5rem 11% 0 0;*/
+            margin: 2.2rem 10.9% 0 0;
             display: block;
-            width: 23px;
-            height:23px;            
+            width: 27px;
+            height:27px;            
         }
         a span{
             display: none;
@@ -294,7 +294,7 @@ header{
             width: @mapOverWidth - (2*40px);
             height: @mapHeight - (2*25px);
             position: absolute;
-            margin: 0 0 0 11%;
+            margin: 0 0 0 9.7%;
             z-index: 100;   
             font-size: 13px;
             letter-spacing: 2.5px;
@@ -349,6 +349,35 @@ header{
         }
     }
 
+}
+
+#about{
+    text-align: center;
+    position: relative;
+    padding: 0 30px;
+    .centerblock{
+        max-width: @footerMaxWidth;
+        margin: 0 auto;
+        position: relative;
+
+        img{
+            width: 49%;
+            padding:2.5rem 0 4rem 0;
+        }
+        .left{
+            float: left;
+        }
+        .right{    
+            float: right;
+        }
+
+        p{
+            padding:0.7rem 0;
+            text-align: left;
+            font-size: 13px;
+            line-height: 1.45rem;
+        }
+    }
 }
 
 footer {

@@ -1,10 +1,22 @@
 <?php
 
 $menu=[
-	['name' => 'főoldal', 'link' => '/'],
-	['name' => 'Referenciák', 'link' => '/'],
-	['name' => 'Rólunk', 'link' => 'about'],
-	['name' => 'Kapcsolat', 'contact']
+	[
+		'name' => 'főoldal', 
+		'link' => '/',
+	],
+	[
+		'name' => 'Referenciák', 
+		'link' => '/',
+	],
+	[
+		'name' => 'Rólunk', 
+		'link' => 'about',
+	],
+	[
+		'name' => 'Kapcsolat',
+		'link' => 'contact',
+	],
 ];
 
 $projects=[
@@ -56,10 +68,12 @@ $projects=[
 	],
 ];
 
+$about=[];
+$about[]="Cégünk egyedisége abban rejlik, hogy elrugaszkodunk<br>a Magyarországon elterjedt, hagyományos kivitelezési és tervezési sablonoktól, nem másoljuk a trendeket, hanem olyan<br>új építészeti megoldásokat dolgozunk ki, amelyekben a letisztult felületek és formák, valamit természetes anyaghasználat dominálnak.<br> Munkatársaink magasan képzett szakemberek, akik mindannyian ezen elvek mellett kötelezték el magukat, így munkáink olyan egyedi arculattal büszkélkedhetnek,<br>amelyek nem köszönnek vissza más stúdiók alkotásaiban. ";
 
-$about["content_0"]="Cégünk egyedisége abban rejlik, hogy elrugaszkodunk a Magyarországon elterjedt, hagyományos kivitelezési és tervezési sablonoktól, nem másoljuk a trendeket, hanem olyan új építészeti megoldásokat dolgozunk ki, amelyekben a letisztult felületek és formák, valamit természetes anyaghasználat dominálnak. Munkatársaink magasan képzett szakemberek, akik mindannyian ezen elvek mellett kötelezték el magukat, így munkáink olyan egyedi arculattal büszkélkedhetnek, amelyek nem köszönnek vissza más stúdiók alkotásaiban. Megrendelőink elképzeléseit részben saját szerelő,- és szakipari területen jártas szakemberekkel, részben kiváló szakmai felkészültségű alvállalkozókkal valósítjuk meg. A kivitelezés során nagy hangsúlyt fektetünk arra, hogy csapatunk tagjai a legjobb eszközparkkal dolgozzanak, hiszen minőségi munkát csak professzionális eszközökkel lehet végezni. Alapvető célkitűzésünk, hogy cégünkben szakmai tudásbázist teremtsünk, ezáltal innovatív tervezési és kivitelezési megoldásokat alkalmazzunk. Fontosnak tartjuk munkatársaink folyamatos továbbképzését, és azt, hogy a velünk együtt dolgozó szakemberek a legmagasabb kivitelezési elvárásoknak is megfeleljenek.";
+$about[]="Megrendelőink elképzeléseit részben saját szerelő,- és szakipari területen jártas szakemberekkel, részben kiváló szakmai felkészültségű alvállalkozókkal valósítjuk meg. A kivitelezés során nagy hangsúlyt fektetünk arra, hogy csapatunk tagjai a legjobb eszközparkkal dolgozzanak, hiszen minőségi munkát csak professzionális eszközökkel lehet végezni. Alapvető célkitűzésünk, hogy cégünkben szakmai tudásbázist teremtsünk, ezáltal innovatív tervezési és kivitelezési megoldásokat alkalmazzunk. Fontosnak tartjuk munkatársaink folyamatos továbbképzését, és azt, hogy a velünk együtt dolgozó szakemberek a legmagasabb kivitelezési elvárásoknak is megfeleljenek.";
 
-$about["content_1"]="Cégünk fő tevékenysége a komplex épület megvalósítás, amely magába foglalja meglévő lakó, kereskedelmi,- és intézményi épületek rekonstrukcióját, új épületek generál kivitelezését, valamint belső terek belsőépítészeti tervezését és megvalósítását. Megbízóinkkal folytatott közös munka során nagy hangsúlyt fektetünk a folyamatos párbeszédre, annak érdekében, hogy az információáramlás hatékonyan valósuljon meg, és ezáltal az elkészült munka Ügyfeleink megelégedésére szolgáljon. Keresse cégünket bizalommal személyesen, vagy elérhetőségeink bármelyikén.";
+$about[]="Cégünk fő tevékenysége a komplex épület megvalósítás, amely magába foglalja meglévő lakó, kereskedelmi,- és intézményi épületek rekonstrukcióját, új épületek generál kivitelezését, valamint belső terek belsőépítészeti tervezését és megvalósítását. Megbízóinkkal folytatott közös munka során nagy hangsúlyt fektetünk a folyamatos párbeszédre, annak érdekében, hogy az információáramlás hatékonyan valósuljon meg, és ezáltal az elkészült munka Ügyfeleink megelégedésére szolgáljon. Keresse cégünket bizalommal személyesen, vagy elérhetőségeink bármelyikén.";
 
 $contact=[
 	'email' => 'info@pojan.hu',
@@ -81,7 +95,8 @@ $contact=[
 
 $footer=[
 	'name' => 'pojan',
-	'descript' => 'komplex  épületkivitelezés',
+	'header' => 'komplex épületmegvalósítás',
+	'descript' => 'komplex épületkivitelezés',
 	'address' => '2092 Budakeszi, Gábor Áron utca 46d.',
 	'facebook' => 'https://www.facebook.com/pojanmuhely/',
 	'pinterest' => 'https://hu.pinterest.com/',

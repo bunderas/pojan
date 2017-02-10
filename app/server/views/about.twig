@@ -3,13 +3,13 @@
 {% block content %}
 	<div id="about">
 		<div class="centerblock">		
-			<img src="{{asset('img/')}}about_0.jpg">
-			<img src="{{asset('img/')}}about_1.jpg">
-			<div>
-				{{about.content_0}}
-			</div><div>
-				{{about.content_1}}
-			</div>
+			<img class="left" src="{{asset('img/')}}about_0.jpg">
+			<img class="right" src="{{asset('img/')}}about_1.jpg">
+			<section>
+				{% for oneP in about %}
+				<p>{{oneP|raw}}</p>
+				{% endfor %}				
+			</section>
 		</div>
 	</div>
 

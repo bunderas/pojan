@@ -16,7 +16,8 @@
         <header class="simple">
       {% endif %}
         {% if active == 'home' %}
-          <h1>{{footer.descript}}</h1>
+          <h1>{{menu.name}}</h1>
+          <h1>{{footer.header}}</h1>
         {% endif %}        
           <div class="topline">
 
@@ -27,10 +28,10 @@
                   <div></div>
                 </div>        
                 <ul id="navbar">
-                    <li{% if active == 'home' %} class="active"{% endif %}><a href="{{ path('home') }}">Home</a></li>
-                    <li{% if active == 'project' %} class="active"{% endif %}><a href="{{ path('project') }}">Project</a></li>
-                    <li{% if active == 'about' %} class="active"{% endif %}><a href="{{ path('about') }}">About</a></li>
-                    <li{% if active == 'contact' %} class="active"{% endif %}><a href="{{ path('contact') }}">Contact</a></li>
+                    <li{% if active == 'home' %} class="active"{% endif %}><a href="{{ path('home') }}">Főoldal</a></li>
+                    <li{% if active == 'project' %} class="active"{% endif %}><a href="{{ path('project') }}">Referenciák</a></li>
+                    <li{% if active == 'about' %} class="active"{% endif %}><a href="{{ path('about') }}">Rólunk</a></li>
+                    <li{% if active == 'contact' %} class="active"{% endif %}><a href="{{ path('contact') }}">Kapcsolat</a></li>
                 </ul>            
               </nav>
 
