@@ -3,12 +3,12 @@
 {% block content %}
 	<div id="project">
 		<div class="centerblock">
-		<div class="pager prev">
-			<a href="{{ path('project', {'projectName':project.prev}) }}">előző projekt</a>
-		</div>
-		<div class="pager next">
-			<a href="{{ path('project', {'projectName':project.next}) }}">következő projekt</a>
-		</div>
+			<div class="pager prev">
+				<a href="{{ path('project', {'projectName':project.prev}) }}">előző projekt</a>
+			</div>
+			<div class="pager next">
+				<a href="{{ path('project', {'projectName':project.next}) }}">következő projekt</a>
+			</div>
 			<h1>{{ project.sub_title }}</h1>
 			<img src="{{asset('img/project')}}/{{project.name}}/{{project.images.first}}">
 			<h2>{{ project.headline }}</h2>

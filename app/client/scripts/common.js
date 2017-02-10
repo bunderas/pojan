@@ -104,8 +104,22 @@
         }, false);
     };
 
+
     $(function() {
         app.init();
     });
 
 })({}, jQuery);
+
+initMap = function() {
+    var pojanPos = {lat: 47.505385, lng: 18.925661};
+    var center = {lat: 47.505385, lng: 18.920661};
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 16,
+        center: center
+    });
+    var marker = new google.maps.Marker({
+        position: pojanPos,
+        map: map
+    });
+}    

@@ -1,7 +1,10 @@
 @headerHeight: 769px;
 @imgMaxWidth: 1020px;
+@centerBoxWidth: 1020px;
 @pageMaxWidth: 1515px;
-
+@mapHeight: 555px;
+@mapOverWidth: 280px;
+@footerMaxWidth:1180px;
 //max-width: 1024px;
 margin: 0 auto;
 position: relative;
@@ -67,10 +70,11 @@ header{
             }
             #navbar{
                 display: none;
-                position: static;
+                position: relative;
+                z-index: 500;
                 left:23px;
                 background-color: @menuBgColor;
-                margin-left:27px; 
+                margin-left:0px; 
                 margin-top:27px; 
                 padding: 2.5rem 0;
                 li{
@@ -168,7 +172,7 @@ header{
             }
             p {
                 a{
-                    color:#5cd0e0;
+                    color:@linkColor;
                     font-size: 0.9rem;
                 }
                 margin-bottom: 4.9rem;
@@ -215,7 +219,7 @@ header{
     position: relative;
 
     .centerblock{
-        max-width: 1020px;
+        max-width: @centerBoxWidth;
         margin: 0 auto;
         padding: 0 12%;
         position: relative;
@@ -276,6 +280,77 @@ header{
 }
 
 
+#contact{
+    position: relative;
+    width: 100%;
+    padding-bottom: 14rem;
+            /*pointer-events: none;*/
+    #map{
+        width: 100%;
+        height: @mapHeight;
+        background-color: grey;       
+    }
+    
+    .centerblock{
+        max-width: @pageMaxWidth;
+        margin: 0 auto;
+        #mapover{
+            width: @mapOverWidth - (2*40px);
+            height: @mapHeight - (2*25px);
+            position: absolute;
+            margin: 0 0 0 11%;
+            z-index: 100;   
+            font-size: 13px;
+            letter-spacing: 2.5px;
+            background-color: rgba(255,255,255,0.8);
+            padding:25px 40px;
+            h1{
+                text-transform: uppercase;
+                font-weight: 600; 
+                font-size: 22px;
+                letter-spacing: 10px;
+                padding: 0 0 1.6rem 0;
+            }
+            h2{
+                text-transform: uppercase;
+                font-weight: 700; 
+                font-size: 15px;
+                letter-spacing: 3px;
+                padding: 0 0 1rem 0;
+            }
+            h3{
+                text-transform: uppercase;
+                font-weight: 700; 
+                font-size: 13px;
+                /*letter-spacing: 4.2px;*/
+                padding: 1.2rem 0 0 0;
+                letter-spacing: 0.9px;
+            }
+            p{
+                font-weight: 400; 
+                padding: 0 0 2rem 0;
+                /*letter-spacing: 10px;*/
+            }
+            li{
+                line-height: 1.5em;
+            }
+            ul{
+                .education{
+                    margin: 0 0 0.8rem 0;
+                }
+            }
+            .social{
+                padding:1rem 0;
+                a{
+                    color: @linkColor;
+                }
+            }
+            
+        }
+    }
+
+}
+
 footer {
     text-align: left;
     background: @footerBackground;
@@ -285,7 +360,7 @@ footer {
     line-height: 1.5rem;
     padding: 30px;
     .container {
-        max-width: 1180px;
+        max-width: @footerMaxWidth;
         margin:auto;
         div{
             width: 33%;
