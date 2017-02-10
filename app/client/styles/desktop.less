@@ -87,7 +87,8 @@ header{
                         text-transform: uppercase;
                         padding: 2em 4em;
                         font-size: 1.07rem;
-                        font-weight: 600;                    
+                        font-weight: 600;
+                        color: #000;
                     }
                     a:hover{
                         background-color: lighten(@menuBgColor,20%);
@@ -98,10 +99,6 @@ header{
 
         }
 
-/*        #hamburger:hover nav {
-            display: block;
-        }
-*/
         a.logo{
             background-image: url('@{imgSrc}logo_plain.svg');
             background-position: 50% 0;
@@ -284,7 +281,6 @@ header{
     position: relative;
     width: 100%;
     padding-bottom: 14rem;
-            /*pointer-events: none;*/
     #map{
         width: 100%;
         height: @mapHeight;
@@ -326,7 +322,7 @@ header{
                 padding: 1.2rem 0 0 0;
                 letter-spacing: 0.9px;
             }
-            p{
+            p, address{
                 font-weight: 400; 
                 padding: 0 0 2rem 0;
                 /*letter-spacing: 10px;*/
@@ -338,6 +334,10 @@ header{
                 .education{
                     margin: 0 0 0.8rem 0;
                 }
+            }
+            .staff{
+                display: inline-block;
+                padding-right:10%;
             }
             .social{
                 padding:1rem 0;

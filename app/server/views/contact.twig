@@ -5,11 +5,11 @@
 		<div class="centerblock">		
 			<section id="mapover">
 				<h1>{{footer.name}}</h1>
-				<p>{{footer.address}}</p>
+				<address>{{footer.address}}</address>
 				<p>{{contact.email}}<br>{{contact.phone}}</p>
 				<h2>munkatársak:</h2>
 				{% for oneStaff in contact.staff %}
-					<div>
+					<div class="staff">
 						<h3>{{oneStaff.name}}</h3>
 						<ul>
 							<li>{{oneStaff.title}}</li>
