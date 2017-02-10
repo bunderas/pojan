@@ -65,6 +65,15 @@ $projects=[
 		'sub_title' => 'Arculatfrissítés',
 		'headline' => 'Budai villaépületben medence tér korszerűsítés és arculatváltás',
 		'description' => 'Az üzlet számára, a bevételkiesés minimalizálása érdekében, a jól szervezett, hatékony és minőségi munkavégzés játszott főszerepet. Egyedi megoldásokkal valósítottuk meg a helyiség adottságaiból fakadó, és a brandhez igazodó belsőépítészeti elemeket. A kivitelezési munka 30 óra alatt készült el.',
+	],	
+	[
+		'name' => 'kis_lakasbol_tagasat',
+		'title' => 'kis lakásból tágasat',
+		'type' => 'komplex szakipar/belsőépítészet  budapest ii.',
+		'tags' => ['#hatékonyság','#látvány','#brand','#minőség'],
+		'sub_title' => 'Megújulás',
+		'headline' => 'Új élet érkezése mindig örömteli pillanat, ám gyakran az otthonunk nincs felkészítve erre',
+		'description' => 'Feladatunk egy kis lakásban plusz szoba létrehozása, ezáltal más funkciók átrendezése és a lakás belsőépítészeti frissítése. A korábbi nappaliból alakítottunk ki közös teret a konyha, étkező, nappali és dolgozó részére törekedve arra, hogy a lehetőségekhez képest élhető tér jöjjön létre. A világos felületek és kontrasztok teszik otthonossá és tágas érzetűvé. ',
 	],
 ];
 
