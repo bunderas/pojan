@@ -4,7 +4,9 @@
 	<div id="projects">
 	{% for project in projects %}
 	    <section>
+	    	<a href="project/{{ project.name }}">
 			<img src="{{asset('img/project')}}/{{project.name}}/index.jpg">
+			</a>
 			<div class="holder">
 				<div>
 					<h2>{{ project.title}}</h2>
